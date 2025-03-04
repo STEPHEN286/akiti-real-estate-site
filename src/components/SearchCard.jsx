@@ -19,31 +19,41 @@ const SearchCard = () => {
   ];
 
   return (
-    <div className="flex items-center space-x-4 p-4 bg-white rounded-lg w-fit">
-      <Select
-        icon={LucideDollarSign}
-        label="Price-Range"
-        options={priceOptions}
-      />
+    <div className="w-full bg-white rounded-lg shadow-lg p-4 md:p-6">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+        <div className="flex-1">
+          <Select
+            icon={LucideDollarSign}
+            label="Price-Range"
+            options={priceOptions}
+            className="w-full"
+          />
+        </div>
 
-      <Select
-        icon={LucideHome}
-        label="Property Type"
-        options={propertyTypeOptions}
-      />
+        <div className="flex-1">
+          <Select
+            icon={LucideHome}
+            label="Property Type"
+            options={propertyTypeOptions}
+            className="w-full"
+          />
+        </div>
 
-      <Input
-        icon={LucideMapPin}
-        label="Location"
-        placeholder="City, State"
-        className=""
-      />
+        <div className="flex-1">
+          <Input
+            icon={LucideMapPin}
+            label="Location"
+            placeholder="City, State"
+            className="w-full"
+          />
+        </div>
 
-      <div className="flex flex-col">
-        <p className="mb-6"></p>
-        <button className="flex items-center bg-black text-white px-4 py-2 rounded">
-          <LucideSearch className="w-4 h-4 mr-2" /> Search
-        </button>
+        <div className="flex items-end">
+          <button className="w-full md:w-auto flex items-center justify-center bg-black text-white px-6 py-2.5 rounded-md hover:bg-gray-800 transition-colors duration-300">
+            <LucideSearch className="w-4 h-4 mr-2" /> 
+            <span>Search</span>
+          </button>
+        </div>
       </div>
     </div>
   );
