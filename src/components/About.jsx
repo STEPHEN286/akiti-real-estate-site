@@ -5,51 +5,70 @@ import ValuesSection from './ValuesSection';
 const About = () => {
   return (
     <div className="mt-[70px]">
-      <section className="h-[40vh] bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&auto=format&fit=crop&q=60')] bg-center bg-cover flex flex-col justify-center items-center text-center text-white">
-        <h1 className="text-5xl mb-4">About Us</h1>
-        <p className="text-xl">Your Trusted Partner in Real Estate</p>
+      {/* Hero Section */}
+      <section className="bg-light py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">About Us</h1>
+          <p className="text-xl text-gray-600">Your Trusted Partner in Ghana Real Estate</p>
+        </div>
       </section>
 
-      <section className="py-16 px-[5%] grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div>
-          <h2 className="text-3xl mb-6 text-gray-800">Our Story</h2>
-          <p className="mb-4 text-gray-600 leading-relaxed">
-            Founded in 2020, Akiti Real Estate has been at the forefront of
-            providing exceptional real estate services to our clients. We believe
+      {/* Story Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">Our Story</h2>
+          <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+            Founded in 2020, HomeHub has been at the forefront of
+            providing exceptional real estate services across Ghana. We believe
             in building lasting relationships and delivering value beyond
-            expectations.
+            expectations in Accra, Kumasi, and beyond.
           </p>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed">
             Our team of experienced professionals is dedicated to helping you find
-            the perfect property that matches your lifestyle and investment goals.
+            the perfect property that matches your lifestyle and investment goals
+            in Ghana's growing real estate market.
           </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center p-8 bg-gray-50 rounded-lg hover:-translate-y-2 transition-transform duration-300">
-            <h3 className="text-4xl text-black mb-2">1000+</h3>
-            <p className="text-gray-600 text-lg">Properties Sold</p>
-          </div>
-          <div className="text-center p-8 bg-gray-50 rounded-lg hover:-translate-y-2 transition-transform duration-300">
-            <h3 className="text-4xl text-black mb-2">500+</h3>
-            <p className="text-gray-600 text-lg">Happy Clients</p>
-          </div>
-          <div className="text-center p-8 bg-gray-50 rounded-lg hover:-translate-y-2 transition-transform duration-300">
-            <h3 className="text-4xl text-black mb-2">50+</h3>
-            <p className="text-gray-600 text-lg">Expert Agents</p>
           </div>
         </div>
       </section>
 
-
-      <section className="py-16 px-[5%] bg-gray-50">
-        <h2 className="text-4xl text-center mb-12 text-gray-800">Our Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map(member => (
-            <TeamCard key={member.id} {...member} />
-          ))}
+      {/* Stats Section */}
+      <section className="py-16 bg-light">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center p-8 bg-white rounded-lg">
+              <h3 className="text-4xl font-bold text-primary mb-2">1000+</h3>
+              <p className="text-gray-600 text-lg">Properties Sold</p>
+            </div>
+            <div className="text-center p-8 bg-white rounded-lg">
+              <h3 className="text-4xl font-bold text-primary mb-2">500+</h3>
+              <p className="text-gray-600 text-lg">Happy Clients</p>
+            </div>
+            <div className="text-center p-8 bg-white rounded-lg">
+              <h3 className="text-4xl font-bold text-primary mb-2">50+</h3>
+              <p className="text-gray-600 text-lg">Expert Agents</p>
+            </div>
+          </div>
         </div>
       </section>
-          <ValuesSection />
+
+      {/* Team Section */}
+      {/* <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Our Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map(member => (
+              <TeamCard key={member.id} {...member} />
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+      {/* Values Section */}
+      <section className="py-16 bg-light">
+        <ValuesSection />
+      </section>
     </div>
   );
 };

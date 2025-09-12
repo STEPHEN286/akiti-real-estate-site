@@ -35,7 +35,7 @@ const PropertyDetails = () => {
               </span>
               <span className="flex items-center gap-2">
                 <DollarSign className="w-5 h-5" />
-                {property.price.toLocaleString()}
+                GHS {property.price.toLocaleString()}
               </span>
             </div>
           </div>
