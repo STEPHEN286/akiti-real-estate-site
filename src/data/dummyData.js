@@ -119,6 +119,54 @@ export const properties = [
       ],
       description: 'Spacious estate with extensive grounds and modern amenities in Kumasi.',
     },
+    {
+      id: 7,
+      title: 'Chamber and Hall Self-contained at Ablekuma Joma',
+      location: 'Ablekuma Joma, Accra',
+      price: 450000, // GHS
+      type: 'chamber',
+      beds: 1,
+      baths: 1,
+      sqft: 400,
+      image: 'https://i0.wp.com/chamberandhall.com/wp-content/uploads/2024/09/FB_IMG_1727464959762.jpg',
+      images: [
+        'https://i0.wp.com/chamberandhall.com/wp-content/uploads/2024/09/FB_IMG_1727464959762.jpg'
+      ],
+      description: 'Affordable self-contained chamber and hall unit perfect for students and young professionals in Ablekuma Joma.',
+    },
+    {
+      id: 8,
+      title: 'Chamber and Hall Self-contained at Teshie Agblezaa',
+      location: 'Teshie Agblezaa, Accra',
+      price: 380000, // GHS
+      type: 'chamber',
+      beds: 1,
+      baths: 1,
+      sqft: 350,
+      image: 'https://chamberandhall.com/wp-content/uploads/2025/09/FB_IMG_1757666618231.jpg',
+      images: [
+        'https://chamberandhall.com/wp-content/uploads/2025/09/FB_IMG_1757666623765.jpg',
+        'https://chamberandhall.com/wp-content/uploads/2025/09/FB_IMG_1757666626603.jpg'
+      ],
+      description: 'Cozy self-contained chamber and hall unit in Teshie Agblezaa with modern amenities and easy access to public transport.',
+    },
+    {
+      id: 9,
+      title: 'Single Room Self-contained at Ablekuma Joma',
+      location: 'Ablekuma Joma, Accra',
+      price: 320000, // GHS
+      type: 'chamber',
+      beds: 1,
+      baths: 1,
+      sqft: 280,
+      image: 'https://chamberandhall.com/wp-content/uploads/2025/09/FB_IMG_1757541427651.jpg',
+      images: [
+        'https://chamberandhall.com/wp-content/uploads/2025/09/FB_IMG_1757541427651.jpg',
+        'https://chamberandhall.com/wp-content/uploads/2025/09/FB_IMG_1757541430682.jpg',
+        'https://chamberandhall.com/wp-content/uploads/2025/09/FB_IMG_1757541442975.jpg'
+      ],
+      description: 'Budget-friendly single room self-contained unit ideal for students and young professionals starting their careers.',
+    },
   ];
 
 import josephine from '../assets/images/josephine.jpg';

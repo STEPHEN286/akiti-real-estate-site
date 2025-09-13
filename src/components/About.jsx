@@ -1,4 +1,4 @@
-import { teamMembers } from '../data/dummyData';
+import { teamMembers, heroImages } from '../data/dummyData';
 import TeamCard from './ui/TeamCard';
 import ValuesSection from './ValuesSection';
 
@@ -6,10 +6,16 @@ const About = () => {
   return (
     <div className="mt-[70px]">
       {/* Hero Section */}
-      <section className="bg-light py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">About Us</h1>
-          <p className="text-xl text-gray-600">Your Trusted Partner in Ghana Real Estate</p>
+      <section 
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImages.about})` }}
+      >
+        {/* Orange overlay for better text readability */}
+        <div className="absolute inset-0 bg-orange-600/60"></div>
+        
+        <div className="relative container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">About Us</h1>
+          <p className="text-xl text-gray-200">Your Trusted Partner in Ghana Real Estate</p>
         </div>
       </section>
 

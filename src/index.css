@@ -9,7 +9,7 @@ body{
 
 /* Simple color scheme */
 :root {
-  --primary: #3b82f6;
+  --primary: #ea580c;
   --secondary: #64748b;
   --accent: #f59e0b;
   --text: #1f2937;
@@ -24,13 +24,16 @@ body{
   color: white;
   border: none;
   padding: 12px 24px;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(234, 88, 12, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: #2563eb;
+  background-color: #c2410c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(234, 88, 12, 0.3);
 }
 
 /* Simple text colors */

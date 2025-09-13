@@ -1,9 +1,9 @@
-import { properties } from '../data/dummyData';
+import { properties, heroImages } from '../data/dummyData';
 import SearchCard from './SearchCard';
 import PropertyOptions from './PropertyOptions';
 import Testimonials from './Testimonials';
 import GetStarted from './GetStarted';
-import bg from "../assets/images/pexels-binyaminmellish-106399.jpg"
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const handleSearch = (searchData) => {
@@ -14,12 +14,18 @@ const Home = () => {
   return (
     <div className="mt-[70px]">
       {/* Hero Section */}
-      <section className="bg-light py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+      <section 
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImages.home})` }}
+      >
+        {/* Orange overlay for better text readability */}
+        <div className="absolute inset-0 bg-orange-600/60"></div>
+        
+        <div className="relative container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Find Your Dream Home in Ghana
           </h1>
-          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
             Discover the perfect property across Accra, Kumasi, and beyond
           </p>
           <div className="max-w-2xl mx-auto">
@@ -62,11 +68,17 @@ const Home = () => {
                   <p className="text-2xl font-bold text-primary mb-4">
                     GHS {property.price.toLocaleString()}
                   </p>
-                  <div className="flex gap-4 text-gray-600 text-sm">
+                  <div className="flex gap-4 text-gray-600 text-sm mb-6">
                     <span>{property.beds} Beds</span>
                     <span>{property.baths} Baths</span>
                     <span>{property.sqft} sqft</span>
                   </div>
+                  <Link 
+                    to={`/property/${property.id}`}
+                    className="block w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-center shadow-md"
+                  >
+                    View Details
+                  </Link>
                 </div>
               </div>
             ))}

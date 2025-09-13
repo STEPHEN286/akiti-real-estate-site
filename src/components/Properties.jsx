@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { properties } from '../data/dummyData';
+import { properties, heroImages } from '../data/dummyData';
 
 const Properties = () => {
   const [filterType, setFilterType] = useState('all');
@@ -29,10 +29,16 @@ const Properties = () => {
   return (
     <div className="mt-[70px]">
       {/* Hero Section */}
-      <section className="bg-light py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Properties</h1>
-          <p className="text-xl text-gray-600">Find the perfect property across Ghana that matches your needs</p>
+      <section 
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImages.properties})` }}
+      >
+        {/* Orange overlay for better text readability */}
+        <div className="absolute inset-0 bg-orange-600/60"></div>
+        
+        <div className="relative container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Our Properties</h1>
+          <p className="text-xl text-gray-200">Find the perfect property across Ghana that matches your needs</p>
         </div>
       </section>
 
@@ -51,6 +57,7 @@ const Properties = () => {
                 <option value="house">House</option>
                 <option value="apartment">Apartment</option>
                 <option value="villa">Villa</option>
+                <option value="chamber">Chamber & Hall</option>
               </select>
             </div>
             <div className="flex-1">
@@ -89,7 +96,7 @@ const Properties = () => {
                   </div>
                   <Link 
                     to={`/property/${property.id}`}
-                    className="block w-full bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors duration-300 text-center"
+                    className="block w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-center shadow-md"
                   >
                     View Details
                   </Link>

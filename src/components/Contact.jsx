@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { heroImages } from '../data/dummyData';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,10 +26,16 @@ const Contact = () => {
   return (
     <div className="mt-[70px]">
       {/* Hero Section */}
-      <section className="bg-light py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Contact Us</h1>
-          <p className="text-xl text-gray-600">Get in touch with our Ghana real estate team</p>
+      <section 
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImages.contact})` }}
+      >
+        {/* Orange overlay for better text readability */}
+        <div className="absolute inset-0 bg-orange-600/60"></div>
+        
+        <div className="relative container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Contact Us</h1>
+          <p className="text-xl text-gray-200">Get in touch with our Ghana real estate team</p>
         </div>
       </section>
 
@@ -127,7 +134,7 @@ const Contact = () => {
                 </div>
                 <button 
                   type="submit" 
-                  className="w-full bg-primary text-white px-6 py-4 rounded-md font-medium hover:bg-blue-700 transition-colors duration-300"
+                  className="w-full bg-primary text-white px-6 py-4 rounded-lg font-semibold hover:bg-orange-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 shadow-md"
                 >
                   Send Message
                 </button>
